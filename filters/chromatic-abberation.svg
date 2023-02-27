@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <filter id="ca" color-interpolation-filters="linearRGB">
+    <feGaussianBlur stdDeviation="1" />
+    <feColorMatrix type="matrix" result="red_" values="4 0 0 0 0
+        0 0 0 0 0 
+        0 0 0 0 0 
+        0 0 0 1 0" />
+    <feOffset in="red_" dx="2" dy="0" result="red" />
+    <feColorMatrix type="matrix" in="SourceGraphic" result="blue_" values="0 0 0 0 0
+        0 2 0 0 0 
+        0 0 10 0 0 
+        0 0 0 1 0" />
+    <feOffset in="blue_" dx="-3" dy="-2" result="blue" />
+    <feBlend mode="screen" id="red-pos" in="red" in2="blue" />
+  </filter>
+</svg>
